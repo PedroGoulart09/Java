@@ -1,0 +1,44 @@
+package MetodosAbstratos;
+
+public class TaxPayer {
+
+	private String name;
+	private Double annualIncome;
+
+	public TaxPayer() {
+	}
+
+	public TaxPayer(String name, Double annualIncome, Double cheers) {
+		this.name = name;
+		this.annualIncome = annualIncome;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getAnnualIncome() {
+		return annualIncome;
+	}
+
+	public void setAnnualIncome(Double annualIncome) {
+		this.annualIncome = annualIncome;
+	}
+
+	public Double annualIncome() {
+		double sum = 0;
+		if (annualIncome < 20000.00) {
+			sum = sum * annualIncome * 20000.00 * 1.5;
+		} else if (annualIncome > 20000.00) {
+			sum = sum * annualIncome * 20000.00 * 2.5;
+		}
+
+		return sum;
+
+	}
+
+}

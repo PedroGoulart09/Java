@@ -1,0 +1,41 @@
+package MetodosAbstratos;
+
+public class Individual extends TaxPayer {
+
+	private Double healthExpenditures;
+
+	public Individual() {
+		super();
+	}
+
+	public Individual(String name, Double annualIncome, Double cheers, Double healthExpenditures) {
+		super(name, annualIncome, cheers);
+		this.healthExpenditures = healthExpenditures;
+	}
+
+	public Double getHealthExpenditures() {
+		return healthExpenditures;
+	}
+
+	public void setHealthExpenditures(Double healthExpenditures) {
+		this.healthExpenditures = healthExpenditures;
+	}
+
+	@Override
+	public double tax() {
+		double basicTax = 0;
+		if (getAnnualIncome() < 20000.0) {
+			basicTax = basicTax * getAnnualIncome() * 0.15;
+		} else {
+			basicTax = basicTax * getAnnualIncome() * 0.25;
+		}
+		if(basicTax < 0.0) {
+			return 0;
+		}
+
+			basicTax = basicTax -= (getHealthExpenditures() * 0.5);
+
+		return 0;
+	}
+
+}

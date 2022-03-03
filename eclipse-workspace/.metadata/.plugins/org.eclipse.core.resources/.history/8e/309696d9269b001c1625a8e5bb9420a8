@@ -1,0 +1,57 @@
+package MetodosAbstratos;
+
+public class FisicPerson {
+
+	private String name;
+	private Double annualIncome;
+	private Double Cheers;
+
+	public FisicPerson() {
+	}
+
+	public FisicPerson(String name, Double annualIncome, Double cheers) {
+		this.name = name;
+		this.annualIncome = annualIncome;
+		Cheers = cheers;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getAnnualIncome() {
+		return annualIncome;
+	}
+
+	public void setAnnualIncome(Double annualIncome) {
+		this.annualIncome = annualIncome;
+	}
+
+	public Double getCheers() {
+		return Cheers;
+	}
+
+	public void setCheers(Double cheers) {
+		Cheers = cheers;
+	}
+
+	public Double annualIncome() {
+		double sum = 0;
+		if (annualIncome < 20000.00) {
+			sum = sum * annualIncome * 20000.00 * 1.5;
+		} else if (annualIncome > 20000.00) {
+			sum = sum * annualIncome * 20000.00 * 2.5;
+		}
+		if (Cheers > 0) {
+			sum = sum * annualIncome * 20000.00 - 50.0;
+
+		}
+		return sum;
+
+	}
+
+}
