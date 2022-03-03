@@ -1,0 +1,28 @@
+package Datas;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.util.Calendar;
+import java.util.Date;
+
+public class Datas {
+
+	public static void main(String[] args) throws ParseException {
+		SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
+		Date y1 = sdf1.parse("25/06/2018");
+		Date y2 = sdf2.parse("25/06/2018 15:42:07");
+
+		Date d = Date.from(Instant.parse("2022-06-25T15:42:07Z"));
+		System.out.println(sdf2.format(d));
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(d);
+		int minutes = cal.get(Calendar.MINUTE);
+		int month = cal.get(Calendar.MONTH) + 1;
+		System.out.println("Minutes: " + minutes);
+		System.out.println("Month: " + month);
+
+	}
+
+}

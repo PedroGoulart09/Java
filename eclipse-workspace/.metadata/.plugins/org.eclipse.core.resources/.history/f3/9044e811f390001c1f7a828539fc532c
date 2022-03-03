@@ -1,0 +1,36 @@
+package project_java;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class desafiosUdemy {
+	public static void main(String[] args) {
+
+		/*
+		 * String a, b, c; int y;
+		 * 
+		 * Scanner str = new Scanner(System.in);
+		 * 
+		 * a = str.nextLine(); b = str.nextLine(); c = str.nextLine(); y =
+		 * str.nextInt();
+		 * 
+		 * str.close();
+		 * 
+		 * System.out.println("Dados Digittados são: "); System.out.println(a);
+		 * System.out.println(b); System.out.println(c); System.out.println(y);
+		 * 
+		 * Locale.setDefault(Locale.US);
+		 * 
+		 * int x = 10; int h = 20; int res = x + h;
+		 * 
+		 * System.out.printf("O resultado da some de %.0f e %.0f = %.0f", x, h, res);
+		 */
+		
+		int x = 10;
+		
+		if(x > 5) {
+			System.out.println("oi");
+		}
+
+	}
+}

@@ -1,0 +1,28 @@
+package EnumeracoesEcomposicao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class ProgramContractUsers {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter department´s name: ");
+		String departmentName = sc.nextLine();
+		System.out.print("Enter Worker data");
+		System.out.print("Name: ");
+		String name = sc.nextLine();
+		System.out.print("Level: ");
+		String level = sc.nextLine();
+		System.out.print("Base Salary: ");
+		double baseSalary = sc.nextDouble();
+		Worker worker = new Worker(name, WorkerLevel.valueOf(level), baseSalary);
+
+		sc.close();
+
+	}
+
+}

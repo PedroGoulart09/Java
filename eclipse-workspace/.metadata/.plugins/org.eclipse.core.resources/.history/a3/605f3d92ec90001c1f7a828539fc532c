@@ -1,0 +1,46 @@
+package project_java;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class SaidaDeDados {
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		
+		/*pegando saida do usuario */
+		
+		/*
+		 * Scanner sc = new Scanner(System.in); String x; x = sc.next();
+		 * System.out.println(" Voce digit string" + x); sc.close();
+		 */
+		
+		
+		/* pegando saida me numero inteiro */
+		
+		/*
+		 * Scanner cs = new Scanner(System.in); int y; y = cs.nextInt(); cs.close();
+		 * System.out.println("Voce digitou inteiro" + y);
+		 * 
+		 * 
+		 * Scanner cd = new Scanner(System.in); double z; z = cd.nextDouble();
+		 * cd.close(); System.out.println("voce digitou um double" + z);
+		 */
+		 
+		
+		String x;
+		int y;
+		double z;
+		
+		Scanner all = new Scanner(System.in);
+		x = all.next();
+		y = all.nextInt();
+		z = all.nextDouble();
+		
+		all.close();
+		System.out.println(" Os dados de entrada são: ");
+		System.out.println(x);
+		System.out.println(y);
+		System.out.println(z);
+		
+	}
+}

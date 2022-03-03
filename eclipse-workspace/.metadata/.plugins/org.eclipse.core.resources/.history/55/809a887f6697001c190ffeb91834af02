@@ -1,0 +1,13 @@
+package project_java;
+
+import java.util.Date;
+
+public class Datas {
+
+	public static void main(String[] args) {
+		Date sc = new Date();
+		System.out.println(sc);
+
+	}
+
+}

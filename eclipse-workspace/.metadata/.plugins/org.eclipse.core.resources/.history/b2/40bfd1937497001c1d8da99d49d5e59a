@@ -1,0 +1,12 @@
+package EnumeracoesEcomposicao;
+
+import java.util.Date;
+
+public class EnumeracoesEcomposicao {
+	public static void main(String[] args) {
+		
+		Order enu = new Order(1080, new Date(), OrderStatus.PENDING_PAYMENT);
+		
+		System.out.println(enu);
+	}
+}

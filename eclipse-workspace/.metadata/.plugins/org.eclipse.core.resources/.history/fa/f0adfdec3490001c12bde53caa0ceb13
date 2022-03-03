@@ -1,0 +1,9 @@
+package Exercicios;
+
+public class Exercicio1 {
+	public static void main(String[] args) {
+		int n1 = (int) 2.3;
+		int n2 = (int) 2.5;
+		System.out.print( n1 + n2);
+	}
+}

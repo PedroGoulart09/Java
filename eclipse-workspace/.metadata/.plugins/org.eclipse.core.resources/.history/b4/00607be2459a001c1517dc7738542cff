@@ -1,0 +1,6 @@
+package EnumeracoesEcomposicao;
+
+public class Departament {
+	private String name;
+
+}

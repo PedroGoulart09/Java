@@ -1,0 +1,39 @@
+package project_java;
+
+import java.util.Scanner;
+import entities.AuxAlugel;
+
+public class AlugelQuartosArray {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("How many rooms will be rented? ");
+		int n = sc.nextInt();
+		AuxAlugel[] alugel = new AuxAlugel[10];
+
+		int zero = 0;
+		for (AuxAlugel auxAlugel : alugel) {
+			System.out.println("Rent #" + zero + ":");
+			System.out.print("Name: ");
+			sc.nextLine();
+			String names = sc.nextLine();
+			System.out.print("Email: ");
+			String email = sc.nextLine();
+			System.out.print("Room: ");
+			int room = sc.nextInt();
+			alugel[room] = new AuxAlugel(names, email, room);
+		}
+
+		System.out.println("Busy rooms:");
+		for (int i = 0; i < 10; i++) {
+			if (alugel[i] != null) {
+				System.out.println(i + ": " + alugel[i]);
+			}
+		}
+
+		sc.close();
+
+	}
+
+}

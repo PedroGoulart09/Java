@@ -1,0 +1,52 @@
+package project_java;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Triangle;
+
+public class ProgramTriangle {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+
+		System.out.println("Digite o tamanho do tringulo em x: ");
+
+		double xA, xB, xC, yA, yB, yC;
+		
+		Triangle x,y;
+		x = new Triangle();
+		y = new Triangle();
+
+		xA = sc.nextDouble();
+		xB = sc.nextDouble();
+		xC = sc.nextDouble();
+
+		System.out.println("Digite o tamanho do triangulo em y: ");
+		yA = sc.nextDouble();
+		yB = sc.nextDouble();
+		yC = sc.nextDouble();
+		Locale.setDefault(Locale.US);
+		double p = (xA + xB + xC) / 2.0;
+		double areaX = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
+
+		p = (yA + yB + yC) / 2.0;
+		double areaY = Math.sqrt(p * (p - yA) * (p - yB) * (p - yC));
+
+		System.out.printf("O triangulo X tem o valor: %.4f%n", areaX);
+		System.out.printf("O triangulo Y tem o valor: %.4f%n", areaY);
+
+		if (areaX > areaY) {
+			System.out.println("O maior triangulo é o X");
+		}
+		else {
+			System.out.println("O maior triangulo é o Y");
+
+		}
+		sc.close();
+
+	}
+
+}

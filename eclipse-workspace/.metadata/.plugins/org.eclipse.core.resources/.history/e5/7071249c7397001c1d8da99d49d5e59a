@@ -1,0 +1,5 @@
+package EnumeracoesEcomposicao;
+
+public enum AuxEnumeracoes {
+	PENDING_PAYMENT, PROCESSING, SHIPPED, DEVILERED;
+}

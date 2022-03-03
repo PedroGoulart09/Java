@@ -1,0 +1,40 @@
+package project_java;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entites.AuxProducts;
+
+public class Products {
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter Products: ");
+		System.out.print("Name: ");
+		String name = sc.nextLine();
+		System.out.print("Price: ");
+		double price = sc.nextDouble();
+		System.out.print("Quantity in stock: ");
+		int quantity = sc.nextInt();
+
+		AuxProducts Products = new AuxProducts("tv", 400.00, 0);
+
+		System.out.println("Product Data: " + Products);
+		System.out.println("Enter the number of products to be added in stock: ");
+		quantity = sc.nextInt();
+		Products.addProducts(quantity);
+
+		System.out.println();
+		System.out.println("Updated data: " + Products);
+
+		System.out.println("Enter the number of products to be remove from stock: ");
+		int remove = sc.nextInt();
+		Products.removeProducts(remove);
+
+		System.out.println();
+		System.out.println("Updated data: " + Products);
+
+		sc.close();
+	}
+}
